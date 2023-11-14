@@ -7,6 +7,7 @@ th, td {
 	border: 1px solid rgba(51,51,51,.2);
 	padding: 8px;
 	text-align: center;
+	max-width: 3rem;
 	}
  th {
     background-color: #f2f2f2;
@@ -21,9 +22,6 @@ th, td {
 	background-color: #ebeade;
 	}
 
-/*-- ------------------ --*/
-/*-- SPEAKINGOFCODE.com --*/
-/*-- ------------------ --*/
 html {
   font-size: 10px;
 }
@@ -53,10 +51,6 @@ body {
   background: #fffef2;
   color: #333;
 }
-h1 {
-  font-size: 16pt;
-  font-weight: lighter;
-}
 
 h2 {
   font-weight: normal;
@@ -82,7 +76,6 @@ a {
 #quoteme input {
   background: transparent;
   color: #333;
-  font-family: "Helvetica";
   border: 0px solid #fff;
   margin-bottom: 20px;
 }
@@ -92,7 +85,6 @@ a {
   padding-top: 10px;
   display: block;
   color: #333;
-  font-family: "helvetica";
   width: 340px;
 }
 #contenta {
@@ -158,53 +150,6 @@ p {
 
 /* Layout helpers
 ----------------------------------*/
-.ui-button,
-.ui-button:link,
-.ui-button:visited,
-.ui-button:hover,
-.ui-button:active {
-	text-decoration: none;
-}
-
-/* to make room for the icon, a width needs to be set here */
-.ui-button-icon-only {
-	width: 2em;
-	box-sizing: border-box;
-	text-indent: -9999px;
-	white-space: nowrap;
-}
-
-/* no icon support for input elements */
-input.ui-button.ui-button-icon-only {
-	text-indent: 0;
-}
-
-/* button icon element(s) */
-.ui-button-icon-only .ui-icon {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -8px;
-	margin-left: -8px;
-}
-
-.ui-button.ui-icon-notext .ui-icon {
-	padding: 0;
-	width: 2.1em;
-	height: 2.1em;
-	text-indent: -9999px;
-	white-space: nowrap;
-
-}
-
-input.ui-button.ui-icon-notext .ui-icon {
-	width: auto;
-	height: auto;
-	text-indent: 0;
-	white-space: normal;
-	padding: .4em 1em;
-}
-
 
 .ui-slider {
 	position: relative;
@@ -279,17 +224,6 @@ input.ui-button.ui-icon-notext .ui-icon {
 
 /* Component containers
 ----------------------------------*/
-
-.ui-widget input,
-.ui-widget select,
-.ui-widget textarea,
-.ui-widget button {
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 1em;
-}
-.ui-widget.ui-widget-content {
-	border: 1px solid #c5c5c5;
-}
 .ui-widget-content {
 	border: 1px solid #dddddd;
 	background: #ffffff;
@@ -387,68 +321,6 @@ a.ui-button:active,
 	text-decoration: none;
 }
 
-/* Interaction Cues
-----------------------------------*/
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-	color: #777620;
-}
-.ui-state-checked {
-	border: 1px solid #dad55e;
-	background: #fffa90;
-}
-.ui-state-highlight a,
-.ui-widget-content .ui-state-highlight a,
-.ui-widget-header .ui-state-highlight a {
-	color: #777620;
-}
-.ui-state-error,
-.ui-widget-content .ui-state-error,
-.ui-widget-header .ui-state-error {
-	border: 1px solid #f1a899;
-	background: #fddfdf;
-	color: #5f3f3f;
-}
-.ui-state-error a,
-.ui-widget-content .ui-state-error a,
-.ui-widget-header .ui-state-error a {
-	color: #5f3f3f;
-}
-.ui-state-error-text,
-.ui-widget-content .ui-state-error-text,
-.ui-widget-header .ui-state-error-text {
-	color: #5f3f3f;
-}
-.ui-priority-primary,
-.ui-widget-content .ui-priority-primary,
-.ui-widget-header .ui-priority-primary {
-	font-weight: bold;
-}
-.ui-priority-secondary,
-.ui-widget-content .ui-priority-secondary,
-.ui-widget-header .ui-priority-secondary {
-	opacity: .7;
-	filter:Alpha(Opacity=70); /* support: IE8 */
-	font-weight: normal;
-}
-.ui-state-disabled,
-.ui-widget-content .ui-state-disabled,
-.ui-widget-header .ui-state-disabled {
-	opacity: .35;
-	filter:Alpha(Opacity=35); /* support: IE8 */
-	background-image: none;
-}
-.ui-state-disabled .ui-icon {
-	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
-}
-
-
-/* Misc visuals
-----------------------------------*/
-
 /* Corner radius */
 .ui-corner-all,
 .ui-corner-top,
@@ -474,19 +346,6 @@ a.ui-button:active,
 .ui-corner-br {
 	border-bottom-right-radius: 3px;
 }
-
-/* Overlays */
-.ui-widget-overlay {
-	background: #aaaaaa;
-	opacity: .3;
-	filter: Alpha(Opacity=30); /* support: IE8 */
-}
-.ui-widget-shadow {
-	-webkit-box-shadow: 0px 0px 5px #666666;
-	box-shadow: 0px 0px 5px #666666;
-}
-
-
 
 .ui-slider .ui-slider-range {
 background: #333;

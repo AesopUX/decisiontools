@@ -1,4 +1,5 @@
 // Initialize the total value to 0
+$.noConflict();
 $(document).ready(function () {
   // Define range descriptions
   var rangeDescriptions = {

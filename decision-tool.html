@@ -1,0 +1,680 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "helvetica";
+	}
+th, td {
+	border: 1px solid rgba(51,51,51,.2);
+	padding: 8px;
+	text-align: center;
+	max-width: 3rem;
+	}
+ th {
+    background-color: #f2f2f2;
+	}
+.dropdown {
+	background: none;
+	font-size: 1.4rem;
+	border: 1px solid rgba(51,51,51,.2);
+	}
+
+.blank {
+	background-color: #ebeade;
+	}
+	
+html {
+  font-size: 10px;
+}
+
+.wrappernew {
+            margin: 0;
+            padding: 0;
+        }
+
+        .colThree {
+            margin: 0 0 20px 0;
+display: flex;
+justify-content: center;
+        }
+
+        .pricepara label {
+            display: inline-block;
+        }
+
+        .pricepara input[type="text"] {
+            width: 100%;
+        }
+
+body {
+  font-size: 1.4rem;
+  font-family: "helvetica";
+  background: #fffef2;
+  color: #333;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+a {
+  color: #333;
+}
+#total {
+  font-size: 30rem;
+}
+#total,
+#price,
+#priceb,
+#pricec,
+#priced,
+#pricee,
+#pricef,
+#pricez {
+  text-align: right;
+  width: 60px;
+}
+#quoteme input {
+  background: transparent;
+  color: #333;
+  border: 0px solid #fff;
+  margin-bottom: 20px;
+}
+#quoteme label {
+  float: left;
+  display: block;
+  padding-top: 10px;
+  display: block;
+  color: #333;
+  width: 340px;
+}
+#contenta {
+  padding: 1px 0px 20px 0px;
+  display: block;
+  width: 400px;
+  text-align: left;
+  font-size: 12pt;
+}
+.pricepara {
+  text-align: centre;
+  font-size: 3rem;
+}
+.pricepara #totalprice {
+  padding-top: 0px;
+  margin-top: 0px;
+  border: 0px solid #000;
+  font-size: 3rem;
+}
+#total {
+  width: 100px;
+  border: 0px solid #000;
+  background: transparent;
+  font-size: 38px;
+  color: #333;
+}
+#quoteme {
+  display: block;
+  background: #fffef2;
+  float: left;
+  clear: both;
+}
+#slider,
+#sliderb,
+#sliderc,
+#sliderd,
+#slidere {
+  width: 400px;
+}
+
+p {
+  font-size: 9pt;
+  line-height: 16pt;
+  margin-top: 20px;
+}
+
+.dropdown {
+	background: none;
+	font-size: 1.4rem;
+	border: 1px solid rgba(51,51,51,.2);
+}
+
+.blank {
+	background-color: #ebeade;
+}
+
+/* jquery UI*/
+/*! jQuery UI - v1.12.1 - 2016-09-14
+* http://jqueryui.com
+* Includes: core.css, accordion.css, autocomplete.css, menu.css, button.css, controlgroup.css, checkboxradio.css, datepicker.css, dialog.css, draggable.css, resizable.css, progressbar.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Arial%2CHelvetica%2Csans-serif&fsDefault=1em&fwDefault=normal&cornerRadius=3px&bgColorHeader=e9e9e9&bgTextureHeader=flat&borderColorHeader=dddddd&fcHeader=333333&iconColorHeader=444444&bgColorContent=ffffff&bgTextureContent=flat&borderColorContent=dddddd&fcContent=333333&iconColorContent=444444&bgColorDefault=f6f6f6&bgTextureDefault=flat&borderColorDefault=c5c5c5&fcDefault=454545&iconColorDefault=777777&bgColorHover=ededed&bgTextureHover=flat&borderColorHover=cccccc&fcHover=2b2b2b&iconColorHover=555555&bgColorActive=007fff&bgTextureActive=flat&borderColorActive=003eff&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=fffa90&bgTextureHighlight=flat&borderColorHighlight=dad55e&fcHighlight=777620&iconColorHighlight=777620&bgColorError=fddfdf&bgTextureError=flat&borderColorError=f1a899&fcError=5f3f3f&iconColorError=cc0000&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=666666&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=5px&offsetTopShadow=0px&offsetLeftShadow=0px&cornerRadiusShadow=8px
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+/* Layout helpers
+----------------------------------*/
+
+
+
+
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: default;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+.ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	height: .8em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+}
+.ui-widget-content a {
+	color: #333333;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd;
+	background: #e9e9e9;
+	color: #333333;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #333333;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 1px solid #c5c5c5;
+	background: #f6f6f6;
+	font-weight: normal;
+	color: #454545;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	color: #454545;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: 1px solid #cccccc;
+	background: #ededed;
+	font-weight: normal;
+	color: #2b2b2b;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited,
+a.ui-button:hover,
+a.ui-button:focus {
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
+.ui-visual-focus {
+	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #333;
+	background: #333;
+	font-weight: normal;
+	color: #ffffff;
+}
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #003eff;
+	background-color: #ffffff;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 3px;
+}
+
+.ui-slider .ui-slider-range {
+background: #333;
+}
+</style>
+
+<table class="waffle no-grid" cellspacing="0" cellpadding="0">
+
+    <tbody>
+        <tr style="height: 42px">
+            <td style="border: none;"></td>
+            <td style="border: none;"></td>
+            <td dir="ltr">Connected</td>
+            <td dir="ltr">Intentional</td>
+            <td dir="ltr">Difference</td>
+            <td dir="ltr">Rigorous</td>
+            <td style="border: none;"></td>
+        </tr>
+        <tr style="height: 20px">
+            <td style="border: none;"></td>
+            <td style="border: none;"></td>
+            <td dir="ltr">B</td>
+            <td dir="ltr">C</td>
+            <td dir="ltr">D</td>
+            <td dir="ltr">E</td>
+            <td dir="ltr">Totals</td>
+        </tr>
+        <tr style="height: 42px">
+            <td dir="ltr">Insights informed</td>
+            <td dir="ltr">A</td>
+            <td dir="ltr">
+                <select id="select-1" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </td>
+            <td dir="ltr">                <select id="select-2" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td dir="ltr">
+                              <select id="select-3" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </td>
+            <td dir="ltr">                <select id="select-4" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+                  
+                </td>
+            <td class="p1" dir="ltr">0</td>
+        </tr>
+        <tr style="height: 42px">
+            <td dir="ltr">Connected</td>
+            <td dir="ltr">B</td>
+            <td class="blank"></td>
+            <td dir="ltr">                <select id="select-5" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td dir="ltr">                <select id="select-6" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td dir="ltr">                <select id="select-7" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td class="p2" dir="ltr">4</td>
+        </tr>
+        <tr style="height: 42px">
+            <td dir="ltr">Intentional</td>
+            <td dir="ltr">C</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td dir="ltr">                <select id="select-8" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td dir="ltr">                <select id="select-9" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td class="p3" dir="ltr">2</td>
+        </tr>
+        <tr style="height: 42px">
+            <td dir="ltr">Difference</td>
+            <td dir="ltr">D</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td dir="ltr">                <select id="select-10" class="dropdown">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select></td>
+            <td class="p4" dir="ltr">2</td>
+        </tr>
+        <tr style="height: 42px">
+            <td dir="ltr">Rigorous</td>
+            <td dir="ltr">E</td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="blank"></td>
+            <td class="p5" dir="ltr">0</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- slider -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <div style="margin-top: 5rem;" class="wrappernew">
+        <div class="colThree">
+            <div id="contenta">
+                <form action="quoteme.php" method="post" name="quoteme" enctype="multipart/form-data">
+                    <p class="pricepara">
+                        Strength of decision:
+                        <label for="total" id="totalprice"></label>
+                        <input name="totalprice" type="text" id="total" disabled="disabled" />
+                    </p>
+                    <div id="quoteme">
+                      
+<h2 id="insightsInformedHeader">Insights informed</h2>
+                        <div id="slider"></div>
+                        <label for="amount"></label>
+                        <input name="one" type="text" id="amount" disabled="disabled" />
+                        <label for="price"></label>
+                        <input name="onea" type="text" id="price" disabled="disabled" />
+                       <h2 id="connectedHeader">Connected</h2>
+                        <div id="sliderb"></div>
+                        <label for="amountb"></label>
+                        <input name="two" type text id="amountb" disabled="disabled" />
+                        <label for="priceb"></label>
+                        <input name="twoa" type="text" id="priceb" disabled="disabled" />
+                       <h2 id="intentionalHeader">Intentional</h2>
+                        <div id="sliderc"></div>
+                        <label for="amountc"></label>
+                        <input name="three" type="text" id="amountc" disabled="disabled" />
+                        <label for="pricec"></label>
+                        <input name="threea" type="text" id="pricec" disabled="disabled" />
+                        <h2 id="differenceHeader">Difference</h2>
+                        <div id="sliderd"></div>
+                        <label for="amountd"></label>
+                        <input name="four" type="text" id="amountd" disabled="disabled" />
+                        <label for="priced"></label> <!-- This label should be moved to the proper place -->
+                        <label for="priced"></label> <!-- Add a label for the "price" of the "Difference" slider -->
+                        <input name="foura" type="text" id="priced" disabled="disabled" /> <!-- Add input for "price" of the "Difference" slider -->
+                        <h2 id="rigorousHeader">Rigorous</h2>
+                        <div id="slidere"></div>
+                        <label for="amounte"></label>
+                        <input name="five" type="text" id="amounte" disabled="disabled" />
+                        <label for="pricee"></label>
+                        <input name="fivea" type="text" id="pricee" disabled="disabled" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<Script>
+// Initialize the total value to 0
+$(document).ready(function () {
+  // Define range descriptions
+  var rangeDescriptions = {
+    0: "Not at all",
+    1: "Can deal with it",
+    2: "Close to ideal",
+    3: "Ideal",
+  };
+
+  // Define the slider elements and their corresponding amount and price fields
+  var sliders = ["#slider", "#sliderb", "#sliderc", "#sliderd", "#slidere"];
+  var priceFields = ["#price", "#priceb", "#pricec", "#priced", "#pricee"];
+  var amountFields = ["#amount", "#amountb", "#amountc", "#amountd", "#amounte"];
+  var totalField = "#total";
+
+// Function to calculate and update the cumulative total
+function updateTotal() {
+  let cumulativeTotal = 0;
+
+  // Fetch the current percentages from the cells
+  const percentages = {
+    'p1': parseFloat($('.p1').text()) / 100 || 0,
+    'p2': parseFloat($('.p2').text()) / 100 || 0,
+    'p3': parseFloat($('.p3').text()) / 100 || 0,
+    'p4': parseFloat($('.p4').text()) / 100 || 0,
+    'p5': parseFloat($('.p5').text()) / 100 || 0,
+  };
+
+  // Sum the values of the sliders multiplied by their corresponding percentages
+  sliders.forEach(function (slider, index) {
+    let sliderValue = $(slider).slider("value");
+    cumulativeTotal += sliderValue * (percentages[`p${index + 1}`] || 0);
+  });
+
+  // Calculate the cumulative percentage and round down to the nearest integer
+  const totalPercentage = Math.floor((cumulativeTotal / 3) * 100);
+
+  // Update the total field
+  $(totalField).val(totalPercentage + '%');
+
+  // Add logic to change the color based on the totalPercentage
+  if (totalPercentage < 70) {
+    $(totalField).css('color', 'red');
+  } else {
+    $(totalField).css('color', 'green');
+  }
+}
+
+// Initialize the sliders with their default values and attach event listeners
+for (var i = 0; i < sliders.length; i++) {
+  // Use a closure to capture the correct index value for each slider
+  (function(index) {
+    $(sliders[index]).slider({
+      range: "min",
+      value: 0,
+      min: 0,
+      max: 3,
+      step: 1,
+      slide: function (event, ui) {
+        var sliderValue = ui.value;
+        var previousSliderValue = $(event.target).data('previousValue') || 0; // Store previous value in data attribute
+
+        $(priceFields[index]).val(sliderValue);
+        $(amountFields[index]).val(rangeDescriptions[sliderValue]);
+        
+        // Calculate the change in slider value
+        var changeInValue = sliderValue - previousSliderValue;
+
+        // Update the previous value
+        $(event.target).data('previousValue', sliderValue);
+
+        // After updating the previous value, call updateTotal function
+        setTimeout(function () {
+          updateTotal();
+        }, 0);
+      }
+    });
+  })(i); // Pass the current index to the closure
+}
+
+// Initialize the price fields with "0"
+for (var i = 0; i < priceFields.length; i++) {
+  $(priceFields[i]).val("0");
+}
+
+// Define header mapping for each dropdown value
+const headerMapping = {
+  'A': { className: 'p1', headerId: 'insightsInformedHeader', headerPrefix: 'Insights informed' },
+  'B': { className: 'p2', headerId: 'connectedHeader', headerPrefix: 'Connected' },
+  'C': { className: 'p3', headerId: 'intentionalHeader', headerPrefix: 'Intentional' },
+  'D': { className: 'p4', headerId: 'differenceHeader', headerPrefix: 'Difference' },
+  'E': { className: 'p5', headerId: 'rigorousHeader', headerPrefix: 'Rigorous' }
+};
+
+// Function to calculate the total count and display it as a percentage
+function calculatePercentage(value) {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  const totalCount = [...dropdowns].filter(dropdown => dropdown.value === value).length;
+  const totalPercentage = (totalCount / dropdowns.length) * 100;
+  const totalsCell = document.querySelector(`.${headerMapping[value].className}`);
+  totalsCell.textContent = totalPercentage.toFixed(2) + '%';
+
+  // Update the corresponding header
+  if (value in headerMapping) {
+    const pValue = $(`.${headerMapping[value].className}`).text();
+    $(`#${headerMapping[value].headerId}`).text(`${headerMapping[value].headerPrefix} ${pValue}`);
+  }
+}
+
+// Add event listeners for dropdown changes for each value
+['A', 'B', 'C', 'D', 'E'].forEach(value => {
+  calculatePercentage(value);
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('change', () => {
+      calculatePercentage(value);
+      updateTotal(); // Call updateTotal here to recalculate the cumulative total
+    });
+  });
+});
+
+// Initial call to set the total on page load
+updateTotal();
+
+});
+</Script>
